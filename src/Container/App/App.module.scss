@@ -5,30 +5,15 @@
 }
 
 .wrapper {
-  display: flex;
-  position: relative;
-  text-align: center; 
-
-.bookContainer {
-  background-color: #282c34;
-  min-height: 100vh;
-  color: white;
-  width: 50%;
-}
-
-.detailsContainer {
-  background-color:brown;
-  min-height: 100vh;
-  color: white;
-  width: 50%;
-}
-
-.searchBar {
-  position: absolute;
-  top: 10px;
-  left: 40%;
-  border-radius: 5px;
-  width: 250px;
-  height: 25px;
-}
+    text-align: center;
+    background-image: url(../../bookshelf.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+  
+    h1 {
+      
+      color: white;
+    }
 }
