@@ -4,6 +4,9 @@ import Searchbar from "../../Component/Searchbar/Searchbar";
 import axios from "axios";
 import Booklist from "../../Component/Booklist/Booklist";
 import Book from '../../Component/Book/Book';
+import Routes from '../../routes/Routes';
+import Header from '../../Component/Header/Header';
+
 
 class App extends Component {
   state = {
@@ -14,36 +17,47 @@ class App extends Component {
   }
 
   setSearchText = (event) => {
+    event.preventDefault();
     const searchText = event.target.value;
-    this.setState({ searchText }, this.filteredBook);
+    const apikey = "AIzaSyDScmM5ENVC7uIPYNLWGz1711wVjAlc9MM";
+    axios.get(`${this.state.urlAPI}q=${searchText}+intitle&key=${apikey}&maxResults=40`)
+      .then(res => {
+        this.setState({ 
+          books: res.data['items'], 
+          filteredBook: res.data['items']
+        }); 
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    // this.setState({ searchText }, this.filteredBook);
     // console.log(searchText);
   }
 
-  filteredBook = () => {
+  // filteredBook = () => {
     
-    let filteredBook = this.state.books.filter(book => {
-      return book.volumeInfo.title.includes(this.state.searchText);
-    });
-    this.setState({ filteredBook });
-    // console.log(this.state.books);
-  }
+  //   let filteredBook = this.state.books.filter(book => {
+  //     return book.volumeInfo.title.includes(this.state.searchText);
+  //   });
+  //   this.setState({ filteredBook });
+  //   // console.log(this.state.books);
+  // }
 
-  async componentDidMount() {
-    const apikey = "AIzaSyDScmM5ENVC7uIPYNLWGz1711wVjAlc9MM";
-    const res = await axios.get(`${this.state.urlAPI}q=${this.state.searchText}&key=${apikey}&maxResults=40`);
-    this.setState({ books: res.data['items'], filteredBook: res.data['items'] });
+  componentDidMount() {
+
     // console.log(this.state.books);
   }
+  
 
   render() {
-    // console.log(this.state.filteredBook);
+    console.log(this.state);
     return (
       <div className={styles.wrapper}>
         <header>
-          <h1>Book finder</h1>
-          <Searchbar searchText={this.state.searchText} setSearchText={this.setSearchText} />
+          <Header />
+          <Searchbar setSearchText={this.setSearchText} />
         </header>
-        <Booklist bookData={this.state.filteredBook} />
+        <Routes bookData={this.state.filteredBook} />
       </div>
     );
   }

@@ -7,7 +7,7 @@ export default class Searchbar extends Component {
             <section className={styles.searchDiv}>
             <input 
                 className={styles.searchBar}
-                placeholder="Enter name..."
+                placeholder="Enter title..."
                 value={this.props.searchText}
                 onChange={this.props.setSearchText}
                 

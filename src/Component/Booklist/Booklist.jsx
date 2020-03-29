@@ -10,7 +10,7 @@ export default class Booklist extends Component {
                 {this.props.bookData ? (
                     <section className={styles.card}>
                         {this.props.bookData.map((book) => (
-                            <Book bookData={book} key={book.id} />
+                            <Book bookData={book} key={book.id}  user={this.props.user}/>
                             
                         ))}
                         
