@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import NavItem from "../Header/NavItem/NavItem";
-
 import styles from "./Header.module.scss";
 
 class Header extends Component {
@@ -23,8 +22,8 @@ class Header extends Component {
     }
 }
 
-Header.propTypes = {
-    toggleMenu: PropTypes.func.isRequired
-}
+// Header.propTypes = {
+//     toggleMenu: PropTypes.func.isRequired
+// }
 
 export default Header;

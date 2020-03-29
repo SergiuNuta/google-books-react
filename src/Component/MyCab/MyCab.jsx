@@ -24,7 +24,7 @@ export default class MyCab extends Component {
         return (
             <>
                 <h1>My Cabinet</h1>
-                <section className={styles.cards}>
+                <section className={styles.card}>
                     {this.state.myCards.map((book) => (
                         <Book bookData={book} key={book.id} />
                     ))}
