@@ -14,16 +14,9 @@ export default class Book extends Component {
         show: false
     }
 
-    // handleClose() {
-    //     this.setState({ setShow: false });
-    // }
-    // handleShow() {
-    //     this.setState({ setShow: true });
-    // }
     handleModal() {
         this.setState({ show: !this.state.show });
     }
-
 
     get title() {
         const bookData = this.props.bookData.volumeInfo;
@@ -47,61 +40,58 @@ export default class Book extends Component {
             })
     }
 
+    // handleRemove = (event) => {
+    //     event.preventDefault();
+    //     firestore
+    //     .collection("google-books")
+    //     .doc(this.props.user.uid)
+    //     .delete()
+    //     .then(() => {
+    //         console.log("Deleted!");
+    //         alert("Deleted from your cabinet!");
+    //     })
+    // }
+
     render() {
         const bookData = this.props.bookData.volumeInfo;
         return (
             <>
 
-                <div className={styles.bookContainer} key={this.props.bookData.id} onClick={this.handleModal}>
+                <div className={styles.bookContainer} key={this.props.bookData.id} >
                     <img
                         src={(bookData.imageLinks != null) ? bookData.imageLinks.thumbnail : "http://tiny.cc/vuzxlz"}
                         alt="not working"
                         className={styles.coverImage} />
-                    <p className={styles.title}>{this.title}</p>
-                    <div className={styles.author}>
-                        <p>--- by ---</p>
-                        <p>{bookData.authors}</p>
-                    </div>
                     <FontAwesomeIcon icon={faBookmark} onClick={this.handleSave} className={styles.icon} />
-                    <div className={styles.cardBack}></div>
-                    {/* <p>Publisher: {bookData.publisher}</p> */}
+                    <div>
+                        <Button variant="dark" size="sm" onClick={this.handleModal} style={{ width: '100px', margin: 'auto' }}>
+                            More info
+                    </Button>
+                    </div>
                     <Modal show={this.state.show} onHide={this.handleModal}>
                         <Modal.Header closeButton> Modal test </Modal.Header>
-                        </Modal>
+                        <div className={styles.firstPartModal}>
+                            <img
+                                src={(bookData.imageLinks != null) ? bookData.imageLinks.thumbnail : "http://tiny.cc/vuzxlz"}
+                                alt="not working"
+                                className={styles.coverImage} />
+                            <div>
+                                <p className={styles.title}>{this.title}</p>
+                                <p>--- by ---</p>
+                                <p>{bookData.authors}</p>
+                                <p>Publisher: {this.props.bookData.publisher}</p>
+                                <p>Total pages: {this.props.bookData.pageCount}</p>
+                            </div>
+                        </div>
+                        <div className={styles.description}>
+                            {this.props.bookData.description}
+                        </div>
+
+                    </Modal>
                 </div>
 
-                {/* <Button variant="primary" onClick={this.handleModal}>
-                    Demo modal
-                </Button> */}
 
-                {/* <Modal show={this.state.show} >
-                    <Modal.Header closeButton>
-                        <Modal.Title>My book</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleModal}>
-                            Close
-          </Button>
-                        <Button variant="primary" onClick={this.handleModal}>
-                            Save Changes
-          </Button>
-                    </Modal.Footer>
-                </Modal> */}
             </>
-
-            // <Card style={{ width: '9rem', margin: '5px' }}  key={this.props.bookData.id}>
-            //     <Card.Img 
-            //     variant="top" 
-            //     src={(bookData.imageLinks != null) ? bookData.imageLinks.thumbnail : "http://tiny.cc/vuzxlz"}
-            //     alt="not working"  
-            //     style={{ width: '100%', height: '200px', position: 'absolute'}}/>
-            //     <Card.Body>
-            //         <Card.Title className={styles.title}>{this.title}</Card.Title>
-            //         <Card.Text className={styles.author}>{this.author}</Card.Text>
-            //         <Button variant="primary">Go somewhere</Button>
-            //     </Card.Body>
-            // </Card>
 
         );
     }
