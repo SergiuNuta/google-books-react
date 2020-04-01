@@ -22,6 +22,7 @@ export default class Routes extends Component {
             .then(result => {
                 this.setState({user: result.user});
                 console.log(this.state.user)
+                globalHistory.navigate("/private/mycabinet");
             })
             .catch(error => {
                 console.log(error);

@@ -12,7 +12,7 @@ class Header extends Component {
                     <ul className={styles.navList}>
                         <NavItem  route="google-books-react" name="Home" />
                         {/* <NavItem  route="/login" name="Login" /> */}
-                        <NavItem  route="/private/mycabinet" name="MyCab" />
+                        <NavItem  route="/private/mycabinet" name="Cabinet" />
                         {/* <NavItem  route="/private/createcard" name="CreateCard" /> */}
 
                     </ul>

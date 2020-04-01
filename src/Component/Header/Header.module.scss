@@ -1,12 +1,19 @@
-
-
-.navList {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 20px;
-
-    a {
-        margin: 0 10px;
-    }
+.appHeader { 
     
+    h1 {
+        margin: 0;
+    }
+
+    .navList {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 20px;
+    
+        a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+    }
 }
+
