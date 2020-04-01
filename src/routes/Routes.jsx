@@ -42,8 +42,8 @@ export default class Routes extends Component {
         // this.signIn();
         return (
             <Router>
-                <Redirect noThrow from="/" to="home" />
-                <Booklist path="home" bookData={this.props.bookData} user={this.state.user}/>
+                <Redirect noThrow from="/" to="google-books-react" />
+                <Booklist path="google-books-react" bookData={this.props.bookData} user={this.state.user}/>
                 <Login path="login" signIn={this.signIn} />
                 <PrivateRoutes path="private" user={this.state.user}> 
                     <MyCab path="mycabinet" user={this.state.user}  signOut={this.signOut} />

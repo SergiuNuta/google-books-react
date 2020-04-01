@@ -10,7 +10,7 @@ class Header extends Component {
                 <h1>Book finder</h1>
                 <nav>
                     <ul className={styles.navList}>
-                        <NavItem  route="/home" name="Home" />
+                        <NavItem  route="google-books-react" name="Home" />
                         {/* <NavItem  route="/login" name="Login" /> */}
                         <NavItem  route="/private/mycabinet" name="MyCab" />
                         {/* <NavItem  route="/private/createcard" name="CreateCard" /> */}
