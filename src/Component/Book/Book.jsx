@@ -14,7 +14,7 @@ export default class Book extends Component {
         show: false
     }
 
-    handleModal() {
+    handleModal = () => {
         this.setState({ show: !this.state.show });
     }
 
