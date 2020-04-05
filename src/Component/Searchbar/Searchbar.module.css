@@ -1,0 +1,18 @@
+.searchDiv {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.searchDiv .searchBar {
+  text-align: center;
+  padding: 7px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+}
+
+.searchDiv .searchBar:focus {
+  outline: none;
+}
+/*# sourceMappingURL=Searchbar.module.css.map */

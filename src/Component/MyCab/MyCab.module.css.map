@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,YAAY;CAChC",
+    "sources": [
+        "MyCab.module.scss"
+    ],
+    "names": [],
+    "file": "MyCab.module.css"
+}

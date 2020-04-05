@@ -1,0 +1,21 @@
+.appHeader h1 {
+  color: #CB7A3B;
+  margin: 0;
+}
+
+.appHeader .navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 20px;
+}
+
+.appHeader .navList a {
+  color: #CB7A3B;
+  margin: 0 10px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=Header.module.css.map */

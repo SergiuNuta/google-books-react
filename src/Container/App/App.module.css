@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  text-align: center;
+  background-image: url(../../debby.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wrapper h1 {
+  color: white;
+}
+/*# sourceMappingURL=App.module.css.map */

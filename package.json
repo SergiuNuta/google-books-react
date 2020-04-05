@@ -1,6 +1,6 @@
 {
   "name": "google-books-react",
-  "homepage": "http://SergiuNuta.github.io/google-books-react",
+  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,6 +26,7 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "timespan": "^2.3.0",
     "uglify-js": "^3.8.1"
   },
   "scripts": {
