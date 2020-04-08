@@ -34,20 +34,16 @@
     
   }
 
-  // .title {
-  //   position: absolute;
-  //   top: 60%;
-  //   margin: 0 auto;
-  // }
+}
 
-  // .author {
-  //   opacity: 0;
+.firstPartModal {
+  display: flex;
+  font-size: 0.8em;
+  justify-content: space-between;
 
-  //   &:hover {
-  //     opacity: 1;
-  //   }
-  // }
-
+  img {
+    width: 50%;
+  }
 }
 
 

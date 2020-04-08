@@ -39,4 +39,18 @@
   font-size: 2rem;
   color: #A86B38;
 }
+
+.firstPartModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.firstPartModal img {
+  width: 50%;
+}
 /*# sourceMappingURL=Book.module.css.map */

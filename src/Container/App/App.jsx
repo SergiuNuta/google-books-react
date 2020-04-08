@@ -30,18 +30,7 @@ class App extends Component {
       .catch(error => {
         console.log(error)
       })
-    // this.setState({ searchText }, this.filteredBook);
-    // console.log(searchText);
   }
-
-  // filteredBook = () => {
-    
-  //   let filteredBook = this.state.books.filter(book => {
-  //     return book.volumeInfo.title.includes(this.state.searchText);
-  //   });
-  //   this.setState({ filteredBook });
-  //   // console.log(this.state.books);
-  // }
 
   componentDidMount() {
 
@@ -50,7 +39,6 @@ class App extends Component {
   
 
   render() {
-    // console.log(this.state);
     return (
       <div className={styles.wrapper}>
         <header>
