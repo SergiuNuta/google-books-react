@@ -5,7 +5,7 @@ import Login from "../Component/Login/Login";
 import MyCab from "../Component/MyCab/MyCab";
 import PrivateRoutes from "./PrivateRoutes.jsx";
 import firebase, { providers, firestore } from "../firebase";
-// import CreateCard from "../components/CreateCard/CreateCard";
+
 
 
 const NotFound = () => (<h2>Not Found</h2>);

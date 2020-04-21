@@ -4,7 +4,6 @@ import styles from "./Booklist.module.scss";
 
 export default class Booklist extends Component {
     render() {
-        // console.log(this.props.bookData)
         return (
             <>
                 {this.props.bookData ? (

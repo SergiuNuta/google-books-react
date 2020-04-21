@@ -54,7 +54,7 @@ export default class Book extends Component {
 
     render() {
         const bookData = this.props.bookData.volumeInfo;
-        console.log(bookData);
+        // console.log(bookData);
         return (
             <>
 
@@ -77,7 +77,7 @@ export default class Book extends Component {
                                     alt="not working"
                                     className={styles.coverImage} />
                                 <div>
-                                    <p className={styles.title}>title: {this.title}</p>
+                                    <p>title: {this.title}</p>
                                     <p>author: {bookData.authors}</p>
                                     <p>publisher: {this.props.bookData.publisher}</p>
                                     <p>total pages: {this.props.bookData.pageCount}</p>
@@ -86,9 +86,9 @@ export default class Book extends Component {
                         </Modal.Header>
                         <Modal.Body>
                         <div className={styles.description}>
-                            {bookData.description}
+                            {bookData.description != null ? bookData.description : "No description to display"}
                         </div>
-                            <p>Modal body text goes here.</p>
+                            {/* <p>Modal body text goes here.</p> */}
                         </Modal.Body>
                         
 
