@@ -77,10 +77,10 @@ export default class Book extends Component {
                                     alt="not working"
                                     className={styles.coverImage} />
                                 <div>
-                                    <p>title: {this.title}</p>
-                                    <p>author: {bookData.authors}</p>
-                                    <p>publisher: {this.props.bookData.publisher}</p>
-                                    <p>total pages: {this.props.bookData.pageCount}</p>
+                                    <p><span>title:</span> {this.title != null ? this.title : "No title to display"}</p>
+                                    <p><span>author:</span> {bookData.authors != null ? bookData.authors : "No authors to display"}</p>
+                                    <p><span>publisher:</span> {bookData.publisher != null ? bookData.publisher : "No publisher to display"}</p>
+                                    <p><span>total pages:</span> {bookData.pageCount != null ? bookData.pageCount : "No number of pages to display"}</p>
                                 </div>
                             </div>
                         </Modal.Header>
