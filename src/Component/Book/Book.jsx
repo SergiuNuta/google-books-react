@@ -88,9 +88,11 @@ export default class Book extends Component {
                         <div className={styles.description}>
                             {bookData.description != null ? bookData.description : "No description to display"}
                         </div>
-                            {/* <p>Modal body text goes here.</p> */}
                         </Modal.Body>
-                        
+                        <Modal.Footer>
+                           {/* <button type="button" class="btn btn-primary" data-target={bookData.previewLink}> previewLink </button> */}
+                           <a href={bookData.previewLink} class="btn btn-primary"  role="button" target="blank">preview</a>
+                        </Modal.Footer>
 
                     </Modal>
                 </div>
