@@ -28,6 +28,7 @@ export default class Book extends Component {
 
     handleSave = (event) => {
         event.preventDefault();
+        if (this.props.user) {
         firestore
             .collection("google-books")
             .add({
@@ -38,6 +39,9 @@ export default class Book extends Component {
                 console.log("It worked!")
                 alert("Saved to your cabinet!")
             })
+        } else {
+            alert("Login first!")
+        }
     }
 
     // handleRemove = (event) => {
@@ -63,7 +67,10 @@ export default class Book extends Component {
                         src={(bookData.imageLinks != null) ? bookData.imageLinks.thumbnail : "http://tiny.cc/vuzxlz"}
                         alt="not working"
                         className={styles.coverImage} />
-                    <FontAwesomeIcon icon={faBookmark} onClick={this.handleSave} className={styles.icon} />
+                    <FontAwesomeIcon
+                        icon={faBookmark}
+                        onClick={this.handleSave}
+                        className={styles.icon} />
                     <div>
                         <Button variant="dark" size="sm" onClick={this.handleModal} style={{ width: '100px', margin: 'auto' }}>
                             More info
@@ -85,13 +92,12 @@ export default class Book extends Component {
                             </div>
                         </Modal.Header>
                         <Modal.Body>
-                        <div className={styles.description}>
-                            {bookData.description != null ? bookData.description : "No description to display"}
-                        </div>
+                            <div className={styles.description}>
+                                {bookData.description != null ? bookData.description : "No description to display"}
+                            </div>
                         </Modal.Body>
                         <Modal.Footer>
-                           {/* <button type="button" class="btn btn-primary" data-target={bookData.previewLink}> previewLink </button> */}
-                           <a href={bookData.previewLink} class="btn btn-primary"  role="button" target="blank">preview</a>
+                            <a href={bookData.previewLink} class="btn btn-primary" role="button" target="blank">preview</a>
                         </Modal.Footer>
 
                     </Modal>
