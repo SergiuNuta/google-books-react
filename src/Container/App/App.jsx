@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styles from './App.module.scss';
 import Searchbar from "../../Component/Searchbar/Searchbar";
 import axios from "axios";
-import Booklist from "../../Component/Booklist/Booklist";
-import Book from '../../Component/Book/Book';
 import Routes from '../../routes/Routes';
 import Header from '../../Component/Header/Header';
 
@@ -33,10 +31,10 @@ class App extends Component {
       })
   }
 
-  componentDidMount() {
+  // componentDidMount() {
 
-    // console.log(this.state.books);
-  }
+  //   // console.log(this.state.books);
+  // }
   
 
   render() {

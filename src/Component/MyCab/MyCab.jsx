@@ -23,7 +23,9 @@ export default class MyCab extends Component {
     render() {
         return (
             <>
-                <h1>My Cabinet</h1>
+                <div onClick={this.props.signOut} className={styles.google}>
+                    <button>Sign out from google</button>
+                </div>
                 <section className={styles.card}>
                     {this.state.myCards.map((book) => (
                         <Book bookData={book} key={book.id} />

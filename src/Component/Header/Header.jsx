@@ -20,8 +20,4 @@ class Header extends Component {
     }
 }
 
-// Header.propTypes = {
-//     toggleMenu: PropTypes.func.isRequired
-// }
-
 export default Header;

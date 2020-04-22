@@ -35,12 +35,11 @@ export default class Routes extends Component {
             .signOut()
             .then(() => {
                 this.setState({user: null});
-                globalHistory.navigate("/login");
+                globalHistory.navigate("/google-books-react");
             })
     }
 
     render() {
-        // this.signIn();
         return (
             <Router>
                 <Redirect noThrow from="/" to="google-books-react" />

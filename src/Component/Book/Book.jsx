@@ -44,21 +44,22 @@ export default class Book extends Component {
         }
     }
 
-    // handleRemove = (event) => {
-    //     event.preventDefault();
-    //     firestore
-    //     .collection("google-books")
-    //     .doc(this.props.user.uid)
-    //     .delete()
-    //     .then(() => {
-    //         console.log("Deleted!");
-    //         alert("Deleted from your cabinet!");
-    //     })
-    // }
+    handleRemove = (event) => {
+        event.preventDefault();
+        firestore
+        .collection("google-books")
+        .doc('doc.id')
+        .delete()
+        .then(() => {
+            console.log("Deleted!");
+            alert("Deleted from your cabinet!");
+        })
+        
+    }
 
     render() {
         const bookData = this.props.bookData.volumeInfo;
-        // console.log(bookData);
+        // console.log(this.props.bookData.id);
         return (
             <>
 
