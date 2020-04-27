@@ -5,6 +5,7 @@ import { Card, Button, Modal } from "react-bootstrap";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../Header/Header";
+import { globalHistory } from "@reach/router"; 
 
 
 
@@ -41,6 +42,7 @@ export default class Book extends Component {
             })
         } else {
             alert("Login first!")
+            globalHistory.navigate("/login");
         }
     }
 
@@ -59,7 +61,6 @@ export default class Book extends Component {
 
     render() {
         const bookData = this.props.bookData.volumeInfo;
-        // console.log(this.props.bookData.id);
         return (
             <>
 

@@ -17,7 +17,6 @@ class App extends Component {
   setSearchText = (event) => {
     event.preventDefault();
     const searchText = event.target.value;
-    // const apikey = "AIzaSyDScmM5ENVC7uIPYNLWGz1711wVjAlc9MM";
     const apikey = "AIzaSyB0seXccvK4y9EfPBho86Aj0WcTtjfeEa8";
     axios.get(`${this.state.urlAPI}q=${searchText}+intitle&key=${apikey}&maxResults=40`)
       .then(res => {
@@ -30,11 +29,6 @@ class App extends Component {
         console.log(error)
       })
   }
-
-  // componentDidMount() {
-
-  //   // console.log(this.state.books);
-  // }
   
 
   render() {
