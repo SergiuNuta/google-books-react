@@ -50,7 +50,7 @@ export default class Book extends Component {
         event.preventDefault();
         firestore
         .collection("google-books")
-        .doc('doc.id')
+        .doc('google-books.id')
         .delete()
         .then(() => {
             console.log("Deleted!");
